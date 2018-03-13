@@ -1,0 +1,8 @@
+{
+    "greeting": ["你好! 欢迎进入中华航空自动客服系统!"],
+    "instructions": "Our well trained China Airlines chatbot will be answering your various questions like: \n\n* '1.   Re-confirm Reservation'\n* '2.  Flight Information'\n* '3.  Real Time Flight Status'\n* '4. General FAQs'",
+    "locale_prompt": "What's your preferred language?",
+    "locale_updated": "Your preferred language is now english.",
+    "provide_departure": "好的, 接下來我將協助您預定所需要的航班, 請問您打算從哪裏出發呢?"
+
+}

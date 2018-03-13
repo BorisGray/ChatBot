@@ -1,0 +1,359 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "CALChatBot",
+  "desc": "中华航空客服系统",
+  "culture": "zh-cn",
+  "intents": [
+    {
+      "name": "book.depart"
+    },
+    {
+      "name": "book.destination"
+    },
+    {
+      "name": "book.round_trip_or_one_way"
+    },
+    {
+      "name": "book.start_booking"
+    },
+    {
+      "name": "flight_change.reservation_number"
+    },
+    {
+      "name": "flight_search.flight_status"
+    },
+    {
+      "name": "inquiry.baggage"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "地点.地点距离",
+      "inherits": {
+        "domain_name": "地点",
+        "model_name": "地点距离"
+      }
+    },
+    {
+      "name": "天气.地点",
+      "inherits": {
+        "domain_name": "天气",
+        "model_name": "地点"
+      }
+    },
+    {
+      "name": "航班号"
+    },
+    {
+      "name": "訂位代號"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetimeV2",
+    "money",
+    "temperature"
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "17号常德天气。",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 4,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "1公里有多远",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "A8B9MO",
+      "intent": "flight_change.reservation_number",
+      "entities": [
+        {
+          "entity": "訂位代號",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "中山空气怎么样",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "了解CI104航班的狀態",
+      "intent": "flight_search.flight_status",
+      "entities": [
+        {
+          "entity": "航班号",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "今天上海有雨吗",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "从北京到上海有1000公里吗",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "以我的位置为中点显示1公里内的酒店",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "全国天气",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "告诉我附近1公里内的餐厅",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "周围3公里的饭店",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "帮我查一下江苏宿迁的天气",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "广州到四川有多少公里路程",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 8,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "想預定航班",
+      "intent": "book.start_booking",
+      "entities": []
+    },
+    {
+      "text": "成都天气",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "我想查询今天 CI104 的航班是否正常",
+      "intent": "flight_search.flight_status",
+      "entities": [
+        {
+          "entity": "航班号",
+          "startPos": 7,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "我想要預定航班",
+      "intent": "book.start_booking",
+      "entities": []
+    },
+    {
+      "text": "把我的天气设置为广州",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "明天武汉的天气怎么样",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "显示5公里内全部火锅店",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 2,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "武漢",
+      "intent": "book.destination",
+      "entities": []
+    },
+    {
+      "text": "给我展示五英里以内的餐馆",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 4,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "胶州市明天会下雨吗",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "臺北",
+      "intent": "book.depart",
+      "entities": []
+    },
+    {
+      "text": "託運行李箱被弄壞了怎麼辦?",
+      "intent": "inquiry.baggage",
+      "entities": []
+    },
+    {
+      "text": "請問您是選擇單程還是雙程?",
+      "intent": "book.round_trip_or_one_way",
+      "entities": []
+    },
+    {
+      "text": "锦州明天下雨吗",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "天气.地点",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "附近200米内的小吃店",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 2,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "附近一公里的餐厅",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "地点.地点距离",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "預定航班",
+      "intent": "book.start_booking",
+      "entities": []
+    },
+    {
+      "text": "高雄",
+      "intent": "book.destination",
+      "entities": []
+    }
+  ]
+}
